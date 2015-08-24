@@ -22,8 +22,8 @@ class Ffmpeg(Package):
     depends_on("gtkplus@2.0:")
     
     def install(self, spec, prefix):
-        with working_dir('spack-build', create=True):
-            cmake('..', *std_cmake_args)
-            make()
-            make("install")
+        configure("--prefix=%s" % prefix)
+
+        make()
+        make("install")
             
