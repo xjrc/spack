@@ -9,11 +9,11 @@ class Ffmpeg(Package):
 
     homepage = "http://opencv.org"
 
-    version('2.7.2',  git='https://source.ffmpeg.org/ffmpeg.git',commit='15466db69e60f486c44e4c3e680d27c951f125d7')
-    version('2.6.4',  git='https://source.ffmpeg.org/ffmpeg.git',commit='b17cec526214dff9d6ac1d97b70167d15a4e14d7')
-    version('2.5.8',  git='https://source.ffmpeg.org/ffmpeg.git',commit='1eb646ec9f87ed488f52561867e107eaee89e20c')
-    version('2.4.11', git='https://source.ffmpeg.org/ffmpeg.git',commit='98f167202262bd6cce85a1845915023a4b2e2b49')
-    version('2.3.6',  git='https://source.ffmpeg.org/ffmpeg.git',commit='db27f50e0658e91758e8a17fdcf390e6bc93c1d2')
+    version('2.7.2',  git='https://github.com/FFmpeg/FFmpeg.git',commit='15466db69e60f486c44e4c3e680d27c951f125d7')
+    version('2.6.4',  git='https://github.com/FFmpeg/FFmpeg.git',commit='b17cec526214dff9d6ac1d97b70167d15a4e14d7')
+    version('2.5.8',  git='https://github.com/FFmpeg/FFmpeg.git',commit='1eb646ec9f87ed488f52561867e107eaee89e20c')
+    version('2.4.11', git='https://github.com/FFmpeg/FFmpeg.git',commit='98f167202262bd6cce85a1845915023a4b2e2b49')
+    version('2.3.6',  git='https://github.com/FFmpeg/FFmpeg.git',commit='db27f50e0658e91758e8a17fdcf390e6bc93c1d2')
     
 
     depends_on("gcc@4.4:")
