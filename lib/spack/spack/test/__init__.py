@@ -56,7 +56,8 @@ test_names = ['versions',
               'spec_yaml',
               'optional_deps',
               'make_executable',
-              'configure_guess']
+              'configure_guess',
+              'cflags']
 
 
 def list_tests():
