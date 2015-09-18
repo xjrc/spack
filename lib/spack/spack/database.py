@@ -249,9 +249,10 @@ class Database(object):
         # Write a temporary database file them move it into place
         try:
             with open(temp_file, 'w') as f:
-                self._last_write_time = int(time.time())
                 self._write_to_yaml(f)
             os.rename(temp_file, self._index_path)
+            self._last_write_time = os.path.getmtime(self._index_path)
+
 
         except:
             # Clean up temp file if something goes wrong.
