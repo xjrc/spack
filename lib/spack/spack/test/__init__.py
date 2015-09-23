@@ -57,7 +57,7 @@ test_names = ['versions',
               'optional_deps',
               'make_executable',
               'configure_guess',
-              'cflags']
+              'database']
 
 
 def list_tests():
