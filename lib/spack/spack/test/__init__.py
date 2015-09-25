@@ -56,8 +56,8 @@ test_names = ['versions',
               'spec_yaml',
               'optional_deps',
               'make_executable',
-              'configure_guess',
-              'database']
+              'configure_guess']#,
+#              'database']
 
 
 def list_tests():
