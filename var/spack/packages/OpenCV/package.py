@@ -15,7 +15,7 @@ class Opencv(Package):
     version('2.4.10.4',git='https://github.com/Itseez/opencv.git',commit='00d9f69')
     version('2.4.9',   git='https://github.com/Itseez/opencv.git',commit='df8e282')
 
-    depends_on("gcc@4.4:")
+    #depends_on("gcc@4.4:")
     depends_on("cmake@2.6:")
     depends_on("pkg-config")
     depends_on("gtkplus@2.0:")

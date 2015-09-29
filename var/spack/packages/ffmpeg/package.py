@@ -16,7 +16,7 @@ class Ffmpeg(Package):
     version('2.3.6',  git='https://github.com/FFmpeg/FFmpeg.git',commit='db27f50e0658e91758e8a17fdcf390e6bc93c1d2')
     
 
-    depends_on("gcc@4.4:")
+    #depends_on("gcc@4.4:")
     depends_on("cmake@2.6:")
     depends_on("pkg-config")
     depends_on("gtkplus@2.0:")
