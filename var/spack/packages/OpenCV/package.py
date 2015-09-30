@@ -19,6 +19,9 @@ class Opencv(Package):
     depends_on("cmake@2.6:")
     depends_on("pkg-config")
     depends_on("gtkplus@2.0:")
+    depends_on("ffmpeg")
+    depends_on("python@2.6:")
+    depends_on("py-numpy")
     
     def install(self, spec, prefix):
         with working_dir('spack-build', create=True):
