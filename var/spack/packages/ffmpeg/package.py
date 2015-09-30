@@ -1,13 +1,9 @@
 from spack import *
 
 class Ffmpeg(Package):
-    """OpenCV (Open Source Computer Vision Library) is an open source
-    computer vision and machine learning software library. OpenCV was
-    built to provide a common infrastructure for computer vision
-    applications and to accelerate the use of machine perception in
-    the commercial products."""
+    """A complete, cross-platform solution to record, convert and stream audio and video."""
 
-    homepage = "http://opencv.org"
+    homepage = "https://www.ffmpeg.org"
 
     version('2.7.2',  git='https://github.com/FFmpeg/FFmpeg.git',commit='15466db69e60f486c44e4c3e680d27c951f125d7')
     version('2.6.4',  git='https://github.com/FFmpeg/FFmpeg.git',commit='b17cec526214dff9d6ac1d97b70167d15a4e14d7')
@@ -16,7 +12,6 @@ class Ffmpeg(Package):
     version('2.3.6',  git='https://github.com/FFmpeg/FFmpeg.git',commit='db27f50e0658e91758e8a17fdcf390e6bc93c1d2')
     
 
-    depends_on("gcc@4.4:")
     depends_on("cmake@2.6:")
     depends_on("pkg-config")
     depends_on("gtkplus@2.0:")
