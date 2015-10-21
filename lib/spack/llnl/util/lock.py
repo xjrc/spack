@@ -99,6 +99,8 @@ class Lock(object):
         Implements recursive lock
         """
         if self._writes == 0:
+            if self._reads != 0:
+                raise LockError("Write lock after read lock illegal due to potential deadlock")
             self._lock(fcntl.LOCK_EX, timeout)
         self._writes += 1
 
@@ -153,3 +155,7 @@ class Lock(object):
         masquerading as write locks at times, but this removes either.
         """
         fcntl.flock(self._fd, fcntl.LOCK_UN)
+
+class LockError(StandardError):
+    def __init__(self,message):
+        super(LockError, self).__init__(message)
