@@ -503,7 +503,10 @@ class Package(object):
 
     @property
     def is_extension(self):
-        return len(self.extendees) > 0
+        for extendee in self.extendees:
+            if extendee in self.spec.flat_dependencies():
+                return True
+        return False
 
 
     def extends(self, spec):
