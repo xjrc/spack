@@ -38,7 +38,7 @@ class PkgConfig(Package):
     parallel = False
 
     # The following patch is needed for gcc-6.1
-    patch('g_date_strftime.patch')
+    patch('g_date_strftime.patch', when='%gcc@6.1')
 
     def install(self, spec, prefix):
         configure("--prefix={0}".format(prefix),
